@@ -10,6 +10,7 @@ import { ProductCategoryDetailsFormComponent } from './product-category-details/
 import { HttpClientModule } from '@angular/common/http';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ProductDetailsFormComponent } from './product-details/product-details-form/product-details-form.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,11 @@ import { ProductDetailsFormComponent } from './product-details/product-details-f
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    RouterModule.forRoot([
+      {path:'', component: ProductCategoryDetailsFormComponent},
+      {path:'', component: ProductDetailsFormComponent}
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
