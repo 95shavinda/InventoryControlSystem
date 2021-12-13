@@ -1,0 +1,31 @@
+<div class="row mt-2">
+    <div class="col-md-5 card">
+        <app-product-details-form></app-product-details-form>
+    </div>
+    <div class="col-md-6 card ml-2">
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <td>Category</td>
+                    <td>Product Name</td>
+                    <td>Product Description</td>
+                    <td>Product Price</td>
+                    <td>Product quantity</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pd of service.list">
+                    <td (click) = "populateProductDetails(pd)">{{pd.category}}</td>
+                    <td (click) = "populateProductDetails(pd)">{{pd.productName}}</td>
+                    <td (click) = "populateProductDetails(pd)">{{pd.productDescription}}</td>
+                    <td (click) = "populateProductDetails(pd)">{{pd.productPrice}}</td>
+                    <td (click) = "populateProductDetails(pd)">{{pd.productQuantity}}</td>
+                    <td><i class="far fa-trash-alt fa-lg text-danger" (click) = "productDetailsDelete(pd.productId)"></i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+

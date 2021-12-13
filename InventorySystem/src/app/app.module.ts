@@ -8,12 +8,16 @@ import { AppComponent } from './app.component';
 import { ProductCategoryDetailsComponent } from './product-category-details/product-category-details.component';
 import { ProductCategoryDetailsFormComponent } from './product-category-details/product-category-details-form/product-category-details-form.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ProductDetailsFormComponent } from './product-details/product-details-form/product-details-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductCategoryDetailsComponent,
-    ProductCategoryDetailsFormComponent
+    ProductCategoryDetailsFormComponent,
+    ProductDetailsComponent,
+    ProductDetailsFormComponent
   ],
   imports: [
     BrowserModule,
