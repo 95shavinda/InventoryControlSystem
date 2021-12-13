@@ -25,7 +25,7 @@ namespace InventoryControlSystem.Controllers
             return await _context.ProductCategoryDetails.ToListAsync();
         }
 
-        // GET:
+        // Product Category - GET:
         [HttpGet("{id}")]
         public async Task<ActionResult<Product_Category>> GetProductCategoryDetails(int id)
         {
@@ -39,7 +39,7 @@ namespace InventoryControlSystem.Controllers
             return productCategoryDetail;
         }
 
-        // PUT:
+        // Product Category - PUT:
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateProductCategoryDetails(int id, Product_Category productCategoryDetail)
         {
@@ -69,7 +69,7 @@ namespace InventoryControlSystem.Controllers
             return NoContent();
         }
 
-        // POST:
+        // Product Category - POST:
         [HttpPost]
         public async Task<ActionResult<Product_Category>> AddProductCategoryDetail(Product_Category productCategoryDetail)
         {
@@ -79,7 +79,7 @@ namespace InventoryControlSystem.Controllers
             return CreatedAtAction("GetProductCategoryDetail", new { id = productCategoryDetail.CategoryID }, productCategoryDetail);
         }
 
-        // DELETE:
+        // Product Category - DELETE:
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProductCategoryDetail(int id)
         {

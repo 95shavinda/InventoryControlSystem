@@ -28,9 +28,11 @@ export class ProductDetailsFormComponent implements OnInit {
   }
 
   insertProductRecord(form:NgForm){
-    this.service.postProductDetails().subscribe(
+    this.service.postProductDetails()
+    .subscribe(
       res => {
         this.resetProductForm(form);
+        this.service.refreshProductList();
         this.toastr.success("Product Details Succeccfully Added","Product Details Save");
 
       },

@@ -26,7 +26,7 @@ namespace InventoryControlSystem.Controllers
             return await _context.ProductDetails.ToListAsync();
         }
 
-        // GET:
+        // Product Details - GET:
         [HttpGet("{id}")]
         public async Task<ActionResult<Product>> GetProductDetails(int id)
         {
@@ -40,7 +40,7 @@ namespace InventoryControlSystem.Controllers
             return productDetail;
         }
 
-        // PUT:
+        // Product Details - PUT:
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateProductDetails(int id, Product productDetail)
         {
@@ -70,7 +70,7 @@ namespace InventoryControlSystem.Controllers
             return NoContent();
         }
 
-        // POST:
+        // Product Details - POST:
         [HttpPost]
         public async Task<ActionResult<Product>> AddProductDetail(Product productDetail)
         {
@@ -80,7 +80,7 @@ namespace InventoryControlSystem.Controllers
             return CreatedAtAction("GetProductCategoryDetail", new { id = productDetail.ProductId }, productDetail);
         }
 
-        // DELETE:
+        // Product Details - DELETE:
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProductDetail(int id)
         {
